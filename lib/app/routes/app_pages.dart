@@ -6,6 +6,8 @@ import 'package:test_cli/app/modules/home/bindings/home_binding.dart';
 import 'package:test_cli/app/modules/home/views/home_view.dart';
 import 'package:test_cli/app/modules/products/bindings/products_binding.dart';
 import 'package:test_cli/app/modules/products/views/products_view.dart';
+import 'package:test_cli/app/modules/shazam/bindings/shazam_binding.dart';
+import 'package:test_cli/app/modules/shazam/views/shazam_view.dart';
 
 part 'app_routes.dart';
 
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.ADD_PRODUCT,
       page: () => AddProductView(),
       binding: AddProductBinding(),
+    ),
+    GetPage(
+      name: _Paths.SHAZAM,
+      page: () => ShazamView(),
+      binding: ShazamBinding(),
     ),
   ];
 }

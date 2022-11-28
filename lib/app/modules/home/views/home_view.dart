@@ -14,9 +14,18 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () => Get.toNamed(Routes.PRODUCTS),
-          child: Text("Product Page >>"),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ElevatedButton(
+              onPressed: () => Get.toNamed(Routes.PRODUCTS),
+              child: Text("<< Product Page"),
+            ),
+            ElevatedButton(
+              onPressed: () => Get.toNamed(Routes.SHAZAM),
+              child: Text("Shazam Page >>"),
+            ),
+          ],
         ),
       ),
     );
